@@ -1,13 +1,6 @@
 //routes/entries.js
-
 import express from "express";
-import {
-    createEntry,
-    deleteEntry,
-    getEntries,
-    updateEntry,
-    getMealsAndRoutines,
-} from "../controllers/entry.js";
+import { createEntry, deleteEntry, getEntries, updateEntry, getMealsAndRoutines } from "../controllers/entry.js";
 
 const router = express.Router();
 

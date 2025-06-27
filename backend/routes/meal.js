@@ -1,12 +1,6 @@
 //routes/meals.js
-
 import express from "express";
-import {
-    createMeal,
-    deleteMeal,
-    getMeals,
-    updateMeal,
-} from "../controllers/meal.js";
+import { createMeal, deleteMeal, getMeals, updateMeal } from "../controllers/meal.js";
 
 const router = express.Router();
 
