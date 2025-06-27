@@ -1,5 +1,3 @@
-//index.js
-
 import express from "express";
 import dotenv from "dotenv";
 import helmet from "helmet";
@@ -11,10 +9,11 @@ import entryRoute from "./routes/entries.js";
 import routineRoute from "./routes/routines.js";
 import mealRoute from "./routes/meals.js";
 import cookieParser from "cookie-parser";
+dotenv.config();
 import cors from "cors"
 
 const app = express();
-dotenv.config();
+app.get('/', (req, res) => { res.send('Hello from Express!') });
 
 const PORT = process.env.PORT || 7700;
 
@@ -31,14 +30,13 @@ mongoose.connection.on("disconnected", () => {
     console.log("mongoDB disconnected!");
 });
 
-app.get('/', (req, res) => { res.send('Hello from Express!') });
 
 app.use(cookieParser())
 app.use(express.json());
 app.use(helmet());
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "*",
     credentials: true
 }))
 
