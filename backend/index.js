@@ -1,15 +1,29 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const morgan = require("morgan");
-const helmet = require("helmet");
-const userRoute = require("./routes/users.js");
-const authRoute = require("./routes/auth.js");
-const entryRoute = require("./routes/entries.js");
-const routineRoute = require("./routes/routines.js");
-const mealRoute = require("./routes/meals.js");
-const cookieParser = require("cookie-parser");
-require("dotenv").config();
+import express from "express";
+import dotenv from "dotenv";
+import helmet from "helmet";
+import morgan from "morgan";
+import mongoose from "mongoose";
+import userRoute from "./routes/users.js";
+import authRoute from "./routes/auth.js";
+import entryRoute from "./routes/entries.js";
+import routineRoute from "./routes/routines.js";
+import mealRoute from "./routes/meals.js";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+dotenv.config();
+
+// const express = require("express");
+// const mongoose = require("mongoose");
+// const cors = require("cors");
+// const morgan = require("morgan");
+// const helmet = require("helmet");
+// const userRoute = require("./routes/users.js");
+// const authRoute = require("./routes/auth.js");
+// const entryRoute = require("./routes/entries.js");
+// const routineRoute = require("./routes/routines.js");
+// const mealRoute = require("./routes/meals.js");
+// const cookieParser = require("cookie-parser");
+// require("dotenv").config();
 
 
 const app = express();
